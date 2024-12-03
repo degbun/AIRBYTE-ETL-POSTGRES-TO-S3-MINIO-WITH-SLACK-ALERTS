@@ -23,7 +23,7 @@ df = pd.DataFrame(data)
 
 # Convert DataFrame to CSV in an in-memory buffer
 csv_buffer = BytesIO()
-df.to_csv(csv_buffer, index=False, encoding='utf-8')
+df.to_csv(csv_buffer, index=False, sep=',',encoding='utf-8')
 csv_buffer.seek(0)
 
 logging.info("DataFrame converted to CSV in memory.")
